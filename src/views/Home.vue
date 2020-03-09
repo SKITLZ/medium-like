@@ -3,7 +3,7 @@
     <section class="section">
       <div class="container">
         <h1 class="title">Главная Medium-like</h1>
-        <PostList :list="postList" />
+        <PostList />
       </div>
     </section>
   </div>
@@ -17,12 +17,6 @@ export default {
 
   components: {
     PostList,
-  },
-
-  computed: {
-    postList() {
-      return this.$store.state.posts.posts;
-    },
   },
 
   created() {

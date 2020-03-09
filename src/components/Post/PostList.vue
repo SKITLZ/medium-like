@@ -3,7 +3,7 @@
   <h2 class="subtitle">Список постов</h2>
   <ul>
     <li
-      v-for="item in list"
+      v-for="item in postList"
       :key="item.id"
     >
       <Post v-bind="item" />
@@ -18,15 +18,14 @@ import Post from '@/components/Post/Post.vue';
 export default {
   name: 'PostList',
 
-  props: {
-    list: {
-      type: Array,
-      default: () => [],
-    },
-  },
-
   components: {
     Post,
+  },
+
+  computed: {
+    postList() {
+      return this.$store.state.posts.posts;
+    },
   },
 };
 </script>

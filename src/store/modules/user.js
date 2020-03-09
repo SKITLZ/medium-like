@@ -5,6 +5,7 @@ export default {
 
   state: {
     user: {
+      id: 1,
       email: 'writer@mail.com',
       role: 'writer',
     },
@@ -24,6 +25,7 @@ export default {
             throw new Error('Incorrect email or password');
           }
           const user = {
+            id: data[0].id,
             email: data[0].login,
             role: data[0].role,
           };
@@ -32,7 +34,7 @@ export default {
         .catch((error) => Promise.reject(error));
     },
     LOGOUT({ commit }) {
-      commit('UPDATE_USER', { email: '', role: '' });
+      commit('UPDATE_USER', { email: '', role: '', id: null });
     },
   },
 

@@ -2,6 +2,7 @@ import Vue from 'vue';
 
 import Buefy from 'buefy';
 import 'buefy/dist/buefy.css';
+import '@/plugins/vee-validate';
 
 // vue core
 import App from './App.vue';

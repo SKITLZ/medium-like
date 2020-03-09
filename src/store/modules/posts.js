@@ -15,7 +15,7 @@ export default {
 
   actions: {
     async FETCH_POSTS({ commit }) {
-      await axios.get('/posts')
+      await axios.get('/posts?_sort=id&_order=desc')
         .then(({ data }) => {
           commit('UPDATE_POSTS', data);
         })

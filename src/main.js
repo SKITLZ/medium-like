@@ -12,7 +12,10 @@ import store from './store';
 
 Vue.config.productionTip = false;
 
-Vue.use(Buefy);
+Vue.use(Buefy, {
+  defaultIconComponent: 'fa-icon',
+  defaultIconPack: 'fas',
+});
 
 new Vue({
   router,

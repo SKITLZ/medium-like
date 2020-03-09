@@ -18,7 +18,7 @@
           <fa-icon class="button__icon" icon="edit" />
           Изменить
         </b-button>
-        <b-button type="is-primary" outlined>
+        <b-button type="is-primary" outlined @click="deletePost">
           <fa-icon class="button__icon" icon="trash-alt" />
           Удалить
         </b-button>
@@ -100,6 +100,9 @@ export default {
         };
         this.$store.dispatch('posts/PATCH_POST', post);
       }, 1000 * 0.5); // Ожидает следующий клик 0.5сек перед отпраки запроса на обновление
+    },
+    deletePost() {
+      this.$store.dispatch('posts/DELETE_POST', this.id);
     },
   },
 };

@@ -31,5 +31,13 @@ export default {
         })
         .catch((error) => Promise.reject(error));
     },
+    DELETE_POST({ commit, state }, id) {
+      axios.delete(`/posts/${id}`, id)
+        .then(() => {
+          const newList = state.posts.filter((el) => el.id !== id);
+          commit('UPDATE_POSTS', newList);
+        })
+        .catch((error) => Promise.reject(error));
+    },
   },
 };

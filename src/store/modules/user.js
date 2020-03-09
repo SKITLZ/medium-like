@@ -5,8 +5,8 @@ export default {
 
   state: {
     user: {
-      email: '',
-      role: '',
+      email: 'writer@mail.com',
+      role: 'writer',
     },
   },
 

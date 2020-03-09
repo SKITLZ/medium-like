@@ -16,12 +16,12 @@
   ],
   "posts": [
     {
-      "id": 1,
+      "id": 3,
       "title": "Первый пост",
       "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam impedit autem minus voluptatum odit voluptas vero dolore eligendi dolores. Suscipit corporis ipsum officia dolorum, similique culpa itaque provident cum quia iusto adipisci sunt? Porro deleniti velit ut molestiae quod! Et tempore illum quaerat reiciendis totam? Cumque architecto ab animi provident.",
       "claps": 0,
-      "createdAt": "2019-09-29T00:00:00.000Z",
-      "updateAt": "2019-09-29T00:00:00.000Z",
+      "createdAt": "2020-03-08T04:20:00.000Z",
+      "updateAt": "2020-03-08T04:20:00.000Z",
       "userId": 1
     },
     {
@@ -29,8 +29,17 @@
       "title": "Название поста",
       "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum ab fuga neque fugiat quos temporibus sunt sed dolores ratione placeat natus qui nulla a eius, debitis sint esse. Sunt, fuga?",
       "claps": 0,
-      "createdAt": "2020-03-08T04:20:00.000Z",
-      "updateAt": "2020-03-08T04:20:00.000Z",
+      "createdAt": "2020-03-04T04:20:00.000Z",
+      "updateAt": "2020-03-04T04:20:00.000Z",
+      "userId": 1
+    },
+    {
+      "id": 1,
+      "title": "Ещё",
+      "description": "Lorem ipsum dolor sit amet consectetur snoop d o double g adipisicing elit. Exercitationem modi, qui quod mlg voluptatem no scope voluptatum corrupti dolores porro minus?",
+      "claps": 42,
+      "createdAt": "2019-09-29T00:00:00.000Z",
+      "updateAt": "2019-09-29T00:00:00.000Z",
       "userId": 1
     }
   ]

@@ -44,20 +44,24 @@ export default {
   },
 
   data: () => ({
-    email: '',
-    password: '',
+    email: 'reader@mail.com',
+    password: '123456',
   }),
 
   methods: {
-    logIn() {
-      this.$refs.observer.validate().then((success) => {
-        if (!success) {
-          console.log('not validated');
-          return;
-        }
+    async logIn() {
+      const validated = await this.$refs.observer.validate()
+        .then((success) => success === true);
 
-        console.log('validated!');
-      });
+      if (!validated) return;
+
+      await this.$store.dispatch('user/LOGIN', {
+        email: this.email,
+        password: this.password,
+      })
+        .then(() => {
+          this.$router.push('/');
+        });
     },
   },
 };

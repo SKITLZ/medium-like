@@ -14,7 +14,7 @@
       </template>
 
       <template v-else-if="userRole === 'writer'">
-        <b-button type="is-primary" outlined>
+        <b-button type="is-primary" outlined tag="router-link" :to="`/post/${id}`">
           <fa-icon class="button__icon" icon="edit" />
           Изменить
         </b-button>
@@ -124,7 +124,7 @@ export default {
 
   .button {
     margin-top: 8px;
-    &:not(:last-of-type) {
+    &:not(:last-child) {
       margin-right: 8px
     }
     &__icon {

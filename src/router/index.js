@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import LoginPage from '../views/LoginPage.vue';
+import PostPage from '../views/PostPage.vue';
 
 import store from '../store';
 
@@ -20,6 +21,17 @@ const routes = [
     beforeEnter: (to, from, next) => {
       // Запрещает авторизованным пользователям переходить на страницу авторизации
       if (store.getters['user/isLoggedIn']) next('/');
+      else next();
+    },
+  },
+  {
+    path: '/post/:id',
+    name: 'PostPage',
+    component: PostPage,
+    beforeEnter: (to, from, next) => {
+      // Запрещает пользователям с ролью, отличной от 'writer'
+      // переходить на страницу редактирвоания
+      if (store.state.user.user.role !== 'writer') next('/');
       else next();
     },
   },

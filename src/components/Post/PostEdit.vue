@@ -86,6 +86,7 @@ export default {
       this.item.userId = this.$store.state.user.user.id;
       this.$store.dispatch('posts/CREATE_POST', this.item)
         .then(() => {
+          this.$store.commit('posts/SET_PAGE', 1);
           this.$router.push('/');
         });
     },

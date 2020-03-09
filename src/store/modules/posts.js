@@ -5,19 +5,27 @@ export default {
 
   state: {
     posts: [],
+    postsTotal: 0,
+    postsPerPage: 10,
+    currentPage: 1,
   },
 
   mutations: {
     UPDATE_POSTS(state, payload) {
-      state.posts = payload;
+      state.posts = payload.data;
+      state.postsTotal = parseInt(payload.headers['x-total-count'], 10);
+    },
+    SET_PAGE(state, payload) {
+      state.currentPage = payload;
     },
   },
 
   actions: {
-    async FETCH_POSTS({ commit }) {
-      await axios.get('/posts?_sort=id&_order=desc')
-        .then(({ data }) => {
-          commit('UPDATE_POSTS', data);
+    async FETCH_POSTS({ commit, state }, page = 1) {
+      await axios.get(`/posts?_sort=id&_order=desc&_limit=${state.postsPerPage}&_page=${page}`)
+        .then((res) => {
+          commit('UPDATE_POSTS', res);
+          commit('SET_PAGE', page);
         })
         .catch((error) => Promise.reject(error));
     },
@@ -29,13 +37,16 @@ export default {
       await axios.post('/posts', post)
         .catch((error) => Promise.reject(error));
     },
-    DELETE_POST({ commit, state }, id) {
+    DELETE_POST({ dispatch }, id) {
       axios.delete(`/posts/${id}`, id)
         .then(() => {
-          const newList = state.posts.filter((el) => el.id !== id);
-          commit('UPDATE_POSTS', newList);
+          dispatch('FETCH_POSTS');
         })
         .catch((error) => Promise.reject(error));
     },
+  },
+
+  getters: {
+    totalPages: ({ postsTotal, postsPerPage }) => Math.ceil(postsTotal / postsPerPage),
   },
 };

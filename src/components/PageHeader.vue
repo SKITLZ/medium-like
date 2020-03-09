@@ -19,14 +19,13 @@ export default {
 
   computed: {
     isLoggedIn() {
-      // Заглушка
-      return false;
+      return this.$store.getters['user/isLoggedIn'];
     },
   },
 
   methods: {
     logOut() {
-      // Заглушка
+      this.$store.dispatch('user/LOGOUT');
     },
   },
 };

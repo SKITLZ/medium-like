@@ -21,14 +21,8 @@ export default {
         })
         .catch((error) => Promise.reject(error));
     },
-    async PATCH_POST({ commit, state }, post) {
+    async PATCH_POST(store, post) {
       await axios.patch(`/posts/${post.id}`, post)
-        .then((res) => {
-          const newList = [...state.posts]; // shallow копия для избежания мутации state напрямую
-          const noteIndex = newList.findIndex((el) => el.id === res.data.id);
-          newList[noteIndex] = res.data;
-          commit('UPDATE_POSTS', newList);
-        })
         .catch((error) => Promise.reject(error));
     },
     DELETE_POST({ commit, state }, id) {

@@ -16,30 +16,129 @@
   "posts": [
     {
       "id": 1,
-      "title": "Первый пост",
-      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam impedit autem minus voluptatum odit voluptas vero dolore eligendi dolores. Suscipit corporis ipsum officia dolorum, similique culpa itaque provident cum quia iusto adipisci sunt? Porro deleniti velit ut molestiae quod! Et tempore illum quaerat reiciendis totam? Cumque architecto ab animi provident.",
-      "claps": 0,
-      "createdAt": "2019-09-29T00:00:00.000Z",
-      "updateAt": "2019-09-29T00:00:00.000Z",
-      "userId": 1
+      "title": "excepteur est veniam nulla",
+      "description": "reprehenderit fugiat exercitation veniam eu ut ut",
+      "userId": 1,
+      "claps": 19,
+      "createdAt": "2020-02-16T01:06:23.728Z",
+      "updateAt": "2020-02-16T01:06:23.728Z"
     },
     {
       "id": 2,
-      "title": "Название поста",
-      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum ab fuga neque fugiat quos temporibus sunt sed dolores ratione placeat natus qui nulla a eius, debitis sint esse. Sunt, fuga?",
-      "claps": 0,
-      "createdAt": "2020-03-04T04:20:00.000Z",
-      "updateAt": "2020-03-04T04:20:00.000Z",
-      "userId": 1
+      "title": "incididunt",
+      "description": "irure do",
+      "userId": 1,
+      "claps": 4,
+      "createdAt": "2020-02-05T16:33:46.930Z",
+      "updateAt": "2020-02-05T16:33:46.930Z"
     },
     {
       "id": 3,
-      "title": "Ещё",
-      "description": "Lorem ipsum dolor sit amet consectetur snoop d o double g adipisicing elit. Exercitationem modi, qui quod mlg voluptatem no scope voluptatum corrupti dolores porro minus?",
-      "claps": 42,
-      "createdAt": "2020-03-08T04:20:00.000Z",
-      "updateAt": "2020-03-08T04:20:00.000Z",
-      "userId": 1
+      "title": "sunt fugiat anim do",
+      "description": "sit excepteur Lorem cupidatat Lorem nostrud qui laboris aute laborum veniam non veniam Lorem",
+      "userId": 1,
+      "claps": 13,
+      "createdAt": "2020-02-05T09:49:13.994Z",
+      "updateAt": "2020-02-05T09:49:13.994Z"
+    },
+    {
+      "id": 4,
+      "title": "enim ad",
+      "description": "enim proident ad esse ad culpa ea officia occaecat aliqua id non pariatur",
+      "userId": 1,
+      "claps": 19,
+      "createdAt": "2020-02-28T00:00:52.497Z",
+      "updateAt": "2020-02-28T00:00:52.497Z"
+    },
+    {
+      "id": 5,
+      "title": "incididunt consectetur excepteur anim",
+      "description": "dolor exercitation id et ipsum enim ad sint commodo sit magna minim ad incididunt incididunt cupidatat amet",
+      "userId": 1,
+      "claps": 11,
+      "createdAt": "2020-02-05T19:01:11.998Z",
+      "updateAt": "2020-02-05T19:01:11.998Z"
+    },
+    {
+      "id": 6,
+      "title": "non ea",
+      "description": "nostrud amet ex voluptate sit commodo sunt Lorem aliqua sunt officia aliquip quis aliquip nulla ea magna excepteur ad cillum tempor irure tempor laboris non deserunt in non duis dolor nostrud",
+      "userId": 1,
+      "claps": 28,
+      "createdAt": "2020-02-22T18:20:40.531Z",
+      "updateAt": "2020-02-22T18:20:40.531Z"
+    },
+    {
+      "id": 7,
+      "title": "cupidatat non magna",
+      "description": "aliquip ut in do magna ea qui sint adipisicing nostrud velit irure ex ipsum fugiat aliqua dolore id irure enim esse ut occaecat est voluptate occaecat deserunt nostrud cillum amet tempor aliqua elit nulla veniam eiusmod aliqua minim consequat amet",
+      "userId": 1,
+      "claps": 1,
+      "createdAt": "2020-03-01T12:49:31.209Z",
+      "updateAt": "2020-03-01T12:49:31.209Z"
+    },
+    {
+      "id": 8,
+      "title": "duis cillum exercitation do",
+      "description": "occaecat fugiat amet",
+      "userId": 1,
+      "claps": 2,
+      "createdAt": "2020-02-26T10:59:20.726Z",
+      "updateAt": "2020-02-26T10:59:20.726Z"
+    },
+    {
+      "id": 9,
+      "title": "duis reprehenderit reprehenderit",
+      "description": "dolore laboris aliqua nulla id aliqua tempor exercitation fugiat laborum et mollit exercitation proident duis magna aliqua consectetur amet nulla sunt in ad deserunt",
+      "userId": 1,
+      "claps": 5,
+      "createdAt": "2020-02-29T06:30:36.553Z",
+      "updateAt": "2020-02-29T06:30:36.553Z"
+    },
+    {
+      "id": 10,
+      "title": "adipisicing consectetur labore ullamco",
+      "description": "occaecat sunt adipisicing est duis eiusmod velit irure irure nisi commodo officia consequat sunt magna veniam labore Lorem velit irure irure labore laboris est id voluptate non",
+      "userId": 1,
+      "claps": 30,
+      "createdAt": "2020-02-08T17:38:37.498Z",
+      "updateAt": "2020-02-08T17:38:37.498Z"
+    },
+    {
+      "id": 11,
+      "title": "quis proident",
+      "description": "irure est sint reprehenderit amet ad occaecat tempor magna non est sit id in ea commodo cillum proident aliquip in commodo pariatur ut incididunt culpa laborum Lorem enim anim fugiat aute duis sit exercitation sit ex labore consectetur aliqua do",
+      "userId": 1,
+      "claps": 14,
+      "createdAt": "2020-02-06T09:00:54.306Z",
+      "updateAt": "2020-02-06T09:00:54.306Z"
+    },
+    {
+      "id": 12,
+      "title": "ad",
+      "description": "commodo mollit velit magna aliqua",
+      "userId": 1,
+      "claps": 29,
+      "createdAt": "2020-02-02T01:07:29.892Z",
+      "updateAt": "2020-02-02T01:07:29.892Z"
+    },
+    {
+      "id": 13,
+      "title": "voluptate",
+      "description": "in nulla sunt deserunt excepteur ad enim ex veniam proident ullamco eiusmod mollit eu anim nulla ex voluptate elit deserunt consequat incididunt esse ad ea non sunt qui qui fugiat ipsum irure tempor cillum proident",
+      "userId": 1,
+      "claps": 18,
+      "createdAt": "2020-02-19T08:01:01.122Z",
+      "updateAt": "2020-02-19T08:01:01.122Z"
+    },
+    {
+      "id": 14,
+      "title": "ea commodo ex",
+      "description": "amet deserunt velit pariatur cillum",
+      "userId": 1,
+      "claps": 36,
+      "createdAt": "2020-02-26T19:10:36.984Z",
+      "updateAt": "2020-02-26T19:10:36.984Z"
     }
   ]
 }

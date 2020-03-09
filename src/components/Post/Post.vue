@@ -7,9 +7,9 @@
       <span class="created">{{ createdAgo }}</span>
 
       <template v-if="userRole === 'reader'">
-        <b-button type="is-primary" outlined>
+        <b-button type="is-primary" outlined @click="increaseClaps">
           <fa-icon class="button__icon" icon="sign-language" />
-          {{ claps }}
+          {{ clapsCopy }}
         </b-button>
       </template>
 
@@ -66,6 +66,11 @@ export default {
     },
   },
 
+  data: () => ({
+    clapTimer: null,
+    clapsCopy: 0,
+  }),
+
   computed: {
     createdAgo() {
       const createdAt = new Date(this.createdAt);
@@ -77,6 +82,24 @@ export default {
     },
     userRole() {
       return this.$store.state.user.user.role;
+    },
+  },
+
+  created() {
+    this.clapsCopy = this.claps;
+  },
+
+  methods: {
+    increaseClaps() {
+      this.clapsCopy += 1;
+      clearTimeout(this.clapTimer);
+      this.clapTimer = setTimeout(() => {
+        const post = {
+          id: this.id,
+          claps: this.clapsCopy,
+        };
+        this.$store.dispatch('posts/PATCH_POST', post);
+      }, 1000 * 0.5); // Ожидает следующий клик 0.5сек перед отпраки запроса на обновление
     },
   },
 };

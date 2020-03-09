@@ -3,7 +3,7 @@
   <div class="card-content">
     <p class="title">{{ item.title }}</p>
     <p>{{ item.description }}</p>
-    <form @submit.prevent="saveChanges">
+    <form @submit.prevent="handleSubmit">
       <b-field label="title">
         <b-input type="text" v-model="item.title" required></b-input>
       </b-field>
@@ -16,7 +16,7 @@
         native-type="submit"
         type="is-primary"
         outlined
-      >Сохранить изменения</b-button>
+      >{{ isNew ? 'Создать пост' : 'Сохранить изменения' }}</b-button>
     </form>
   </div>
 </div>
@@ -42,6 +42,10 @@ export default {
     postList() {
       return this.$store.state.posts.posts;
     },
+    isNew() {
+      if (this.$route.params.id === 'new') return true; // Создание нового поста при id === 'new'
+      return false;
+    },
   },
 
   created() {
@@ -50,6 +54,8 @@ export default {
 
   methods: {
     loadPage() {
+      if (this.isNew) return; // Не нужны данные при создании нового поста
+
       if (this.postList.length) {
         this.getPost();
         return;
@@ -68,6 +74,20 @@ export default {
         return;
       }
       Object.assign(this.item, post);
+    },
+    handleSubmit() {
+      if (this.isNew) this.createPost();
+      else this.saveChanges();
+    },
+    createPost() {
+      const isoString = new Date().toISOString();
+      this.item.createdAt = isoString;
+      this.item.updateAt = isoString;
+      this.item.userId = this.$store.state.user.user.id;
+      this.$store.dispatch('posts/CREATE_POST', this.item)
+        .then(() => {
+          this.$router.push('/');
+        });
     },
     saveChanges() {
       this.item.updateAt = new Date().toISOString();

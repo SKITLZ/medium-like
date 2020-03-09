@@ -40,5 +40,6 @@ export default {
 
   getters: {
     isLoggedIn: ({ user }) => user.email !== '',
+    userIsWriter: ({ user }) => user.role === 'writer',
   },
 };

@@ -25,6 +25,10 @@ export default {
       await axios.patch(`/posts/${post.id}`, post)
         .catch((error) => Promise.reject(error));
     },
+    async CREATE_POST(store, post) {
+      await axios.post('/posts', post)
+        .catch((error) => Promise.reject(error));
+    },
     DELETE_POST({ commit, state }, id) {
       axios.delete(`/posts/${id}`, id)
         .then(() => {

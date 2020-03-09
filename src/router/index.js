@@ -31,7 +31,7 @@ const routes = [
     beforeEnter: (to, from, next) => {
       // Запрещает пользователям с ролью, отличной от 'writer'
       // переходить на страницу редактирвоания
-      if (store.state.user.user.role !== 'writer') next('/');
+      if (!store.getters['user/userIsWriter']) next('/');
       else next();
     },
   },

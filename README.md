@@ -1,29 +1,10 @@
 # medium-like
 
-## Project setup
-```
-yarn install
-```
+### Работа с json-server
+Проект слушает json-server по адресу http://localhost:3000/ (настройка baseURL в ```./src/plugins/axios.js```)
 
-### Compiles and hot-reloads for development
+Мок db.json лежит в корне проекта.
 ```
-yarn run serve
+json-server --watch db.json
 ```
-
-### Compiles and minifies for production
-```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Посты можно сгенерировать по ссылке https://next.json-generator.com/4y7akT1SO
